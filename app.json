@@ -16,23 +16,6 @@
       {
         "url": "heroku/python"
       }
-    ],
-    "env": {
-        "bot_token": {
-            "description": "Obtain a Telegram bot token by contacting @BotFather",
-            "required": true
-        },
-        "app_id": {
-            "description": "API_ID of your Telegram Account my.telegram.org/apps",
-            "required": true
-        },
-        "app_hash": {
-            "description": "API_HASH of your Telegram Account my.telegram.org/apps",
-            "required": true
-        },
-        "session_dsn": {
-            "description": "session_dsn is the session name wanted",
-            "required": true
-        }
-      }
-  }
+    ]
+}
+    
