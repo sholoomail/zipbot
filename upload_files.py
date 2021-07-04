@@ -87,11 +87,15 @@ async def uploading(event):
 
 
 def default_conf_maker() -> RuntimeConfig:
+    i = int(os.environ.get("API_ID", 12345))
+    a = os.environ.get('API_HASH')
+    b = os.environ.get('BOT_TOKEN')
+    s = os.environ.get('SESSION_NAME')
     return RuntimeConfig(
-        bot_token=BOT_TOKEN,
-        app_id=API_ID,
-        app_hash=API_HASH,
-        session_dsn=SESSION_NAME,
+        bot_token=b,
+        app_id=i,
+        app_hash=a,
+        session_dsn=s,
     )
 
 
