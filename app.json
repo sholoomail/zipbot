@@ -12,6 +12,24 @@
     "pyrogram"
     ],
     "stack": "heroku-20",
+    "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "SESSION_NAME": {
+      "description": "Any name you like.",
+      "required": true,
+      "value": "zipfile_bot"
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value from @Botfather",
+      "required": true
+    },
     "buildpacks": [
       {
         "url": "heroku/python"
