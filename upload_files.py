@@ -2,6 +2,7 @@ import tempfile
 from os.path import basename
 from zipfile import ZipFile
 import configparser
+import os
 
 from garnet import ctx
 from garnet.runner import RuntimeConfig
@@ -86,14 +87,11 @@ async def uploading(event):
 
 
 def default_conf_maker() -> RuntimeConfig:
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    default = config['DEFAULT']
     return RuntimeConfig(
-        bot_token=default["bot_token"],
-        app_id=default["app_id"],
-        app_hash=default["app_hash"],
-        session_dsn=default["session_dsn"],
+        bot_token=BOT_TOKEN,
+        app_id=API_ID,
+        app_hash=API_HASH,
+        session_dsn=SESSION_NAME,
     )
 
 
