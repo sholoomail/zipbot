@@ -1,17 +1,6 @@
 {
     "name": "zip_files_bot",
     "description": "A simple telegram bot that takes a list of files sent by the user and returns them zipped.",
-    "repository": "https://github.com/chloez2728/zip_files_bot",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-    "keywords": [
-    "python3",
-    "telegram",
-    "bot",
-    "youtube",
-    "telegram-bot",
-    "pyrogram"
-    ],
-    "stack": "heroku-20",
     "env": {
     "API_ID": {
       "description": "Get this value from my.telegram.org.",
