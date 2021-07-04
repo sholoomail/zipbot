@@ -2,6 +2,13 @@
 
 A simple telegram bot that takes a list of files sent by the user and returns them zipped.
 
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/samadii/zip_files_bot)
+
+
+
 # Usage
 
 To be able to run the code you need to rename `config.sample.ini` to `config.ini` and fill out the needed credentials. `session_dsn` is the session name wanted.
