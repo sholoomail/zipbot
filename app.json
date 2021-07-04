@@ -29,6 +29,7 @@
     "BOT_TOKEN": {
       "description": "Get this value from @Botfather",
       "required": true
+}
     },
     "buildpacks": [
       {
