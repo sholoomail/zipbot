@@ -8,4 +8,4 @@ RUN git clone https://github.com/sanith2005/zip_files_bot
 RUN cd zip_files_bot
 WORKDIR /zip_files_bot
 RUN pip3 install -U -r requirements.txt
-CMD python3 main.py
+CMD python3 upload_files.py
