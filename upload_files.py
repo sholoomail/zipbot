@@ -44,7 +44,7 @@ async def response(event):
 
 @router.message(State.exact(States.state_waiting) | State.entry)
 async def response(event):
-    await event.reply("Error ⚠️ \n\nPlease Send /Start to Restart Bot.")
+    await event.reply("Error ⚠️ \n\nPlease Send /start to Restart Bot.")
 
 
 @router.message(text.commands("zip", prefixes="/") & State.exact(States.state_uploading))
