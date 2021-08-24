@@ -35,7 +35,7 @@ async def only_pm(handler, event):
 
 @router.message(text.commands("start", prefixes="/") & (State.exact(States.state_waiting) | State.entry))
 async def response(event):
-    await event.reply("Hi! Send me a lot of files to zip.\nDo /done to finally zip them and send them back,")
+    await event.reply("Hello Friend! I'm File Zipper Bot. 😉 \n\nSend me a lot of files to zip.\n\nTap /zip to finally zip them and send them back. \n\n@TG_filezipperbot|@SBS_Studio")
     fsm = ctx.CageCtx.get()  # get UserCage of current user
 
     await fsm.set_state(States.state_uploading)
@@ -44,10 +44,10 @@ async def response(event):
 
 @router.message(State.exact(States.state_waiting) | State.entry)
 async def response(event):
-    await event.reply("Send /start to start")
+    await event.reply("Error ⚠️ \n\nPlease Send /Start to Restart Bot.")
 
 
-@router.message(text.commands("done", prefixes="/") & State.exact(States.state_uploading))
+@router.message(text.commands("zip", prefixes="/") & State.exact(States.state_uploading))
 async def finished(event):
     fsm = ctx.CageCtx.get()  # get UserCage of current user
     await fsm.set_state(States.state_naming)
@@ -61,13 +61,13 @@ async def naming(event):
     data = await fsm.get_data()
     files = data['files']
 
-    msg = await event.reply("Downloading...")
+    msg = await event.reply("Downloading . . .")
     with tempfile.TemporaryDirectory() as tmp_dirname:
         with ZipFile(f'{tmp_dirname}/{event.text}.zip', 'w') as zipObj2:
             for file in files:
                 path = await event.client.download_media(file, file=tmp_dirname)
                 zipObj2.write(path, basename(path))
-        await msg.edit(f"Finished uploading {len(files)} files. Uploading zip file..")
+        await msg.edit(f"Finished uploading {len(files)} files. \nUploading zip file . . .")
         await event.reply(file=f'{tmp_dirname}/{event.text}.zip')
     await fsm.set_data({"files": []})
 
@@ -83,7 +83,7 @@ async def uploading(event):
         await event.reply(f"Saved {len(files)} so far!")
 
     else:
-        await event.reply("Please send a file or /done to finish")
+        await event.reply("Please send a file or /zip to finish")
 
 
 def default_conf_maker() -> RuntimeConfig:
