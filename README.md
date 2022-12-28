@@ -2,6 +2,11 @@
 
 A simple telegram bot that takes a list of files sent by the user and returns them zipped.
 
+### Deploy To Render (Paid)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?)
+
+
 
 ## Deploy to Heroku
 
