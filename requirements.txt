@@ -1,2 +1,2 @@
-telegram-garnet
+telegram-garnet==0.2.2
 ffmpeg-python
